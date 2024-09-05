@@ -58,8 +58,8 @@ def run_analysis(df):
         plt.scatter(X.iloc[:, 0], X.iloc[:, 1], c=model_km.labels_, cmap='viridis')
         plt.scatter(model_km.cluster_centers_[:, 0], model_km.cluster_centers_[:, 1], s=300, c='red', label='Centroids')
         plt.title("K-Means Clustering")
-        plt.xlabel("Medals")
-        plt.ylabel("Country")
+        plt.xlabel("Feature 1")
+        plt.ylabel("Feature 2")
         plt.legend()
         plt.savefig(r"./kmeans_plot.png")
         plt.close()
@@ -137,7 +137,7 @@ def generate_report(df):
 # 4. User Interaction
 def main():
     print("Hey, Welcome to the AI Employee for Data Analysis")
-    print("You can ask me to load data, preprocess it, run analysis, or generate a report.\n Press 1 to load data\n Press 2 to preprocess the data\n Press 3 to generate the report\n Press 4 to generate report\n")
+    print("You can ask me to load data, preprocess it, run analysis, or generate a report.\n Press 1 to load data\n Press 2 to preprocess the data\n Press 3 to run the analysis\n Press 4 to generate report\n")
     print("Type 'exit' to quit.")
 
     df = None
